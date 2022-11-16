@@ -1,0 +1,21 @@
+<div>
+    
+    <br/>
+    <div *ngIf="personajes">
+        <a style="margin:0 " [routerLink]="['/series/',personajes[0].idSerie]" rou class="btn btn-info">Volver</a>
+        <table style="margin: 0 auto; width: 500px;">
+            <thead>
+                <tr>
+                    <th>Personaje</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let perso of personajes">
+                    <td>{{perso.nombre}}</td>
+                    <td><img style="width: 250px; height: 150px;" src="{{perso.imagen}}"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

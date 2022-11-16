@@ -1,0 +1,28 @@
+<div>
+    <h1>Personajes y series</h1>
+    <form #form="ngForm">
+        <label>Seleccione una serie: </label><br/>
+        <select (change)="imagenSerie()" #cajaseries>
+            <option [value]="serie.idSerie" *ngFor="let serie of series">{{serie.nombre}}</option>
+        </select>
+        <br/>
+        <label>Seleccione un Personaje:</label><br/>
+        <select  (change)="imagenPersonaje()" #cajapersonajes>
+            <option [value]="personaje.idPersonaje" *ngFor="let personaje of personajes">{{personaje.nombre}}</option>
+        </select><br/>
+        <button (click)="modificar()">Guardar Cambios</button>
+
+    </form>
+    <div *ngIf="filter != null">
+        
+        <h1>{{filter[0].nombre}}</h1><br/>
+        <img style="width: 250px;" src="{{filter[0].imagen}}"/>
+    </div>
+    <div *ngIf="filter2 != null">
+        
+        <h1>{{filter2[0].nombre}}</h1><br/>
+        <img style="width: 250px;" src="{{filter2[0].imagen}}"/>
+    </div>
+    
+    
+</div>
