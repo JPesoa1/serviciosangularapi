@@ -13,6 +13,7 @@ import { PersonajesComponent } from './components/personajes/personajes.componen
 import { ModificarComponent } from './components/modificar/modificar.component';
 
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { InsertarComponent } from './components/insertar/insertar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     SeriesComponent,
     PersonajesComponent,
-    ModificarComponent
+    ModificarComponent,
+    InsertarComponent
   ],
   imports: [
     BrowserModule,

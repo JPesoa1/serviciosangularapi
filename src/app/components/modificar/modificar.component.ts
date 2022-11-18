@@ -30,6 +30,7 @@ export class ModificarComponent implements OnInit {
 
   ngOnInit(): void {
     
+    
   }
 
   imagenSerie(){
@@ -38,6 +39,7 @@ export class ModificarComponent implements OnInit {
     aux=this.series;
     
     this.filter=aux.filter(ser => ser.idSerie == serie);
+    
     
 
   }
@@ -52,8 +54,13 @@ export class ModificarComponent implements OnInit {
 
   }
   modificar(){
-    var personajes=this.cajaPersonajes.nativeElement.value;
-    var serie=this.cajaSeries.nativeElement.value;
+    var idpersonajes=this.cajaPersonajes.nativeElement.value;
+    var idserie=this.cajaSeries.nativeElement.value;
+    console.log(idpersonajes);
+    console.log(idserie);
+    this._service.putPersonajeSerie(idpersonajes,idserie).subscribe(res=>{
+      console.log(res);
+    })
   }
 
 }
